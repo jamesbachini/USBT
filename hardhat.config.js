@@ -30,10 +30,23 @@ module.exports = {
     ]
   },
   networks: {
-    ropsten: {
-      url: process.env.ROPSTEN_URL || "",
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    rinkeby: {
+      url: `https://eth-rinkeby.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
+      accounts: [process.env.PRIVATE_KEY,process.env.USER1_PRIVATE_KEY,],
+    },
+    kovan: {
+      url: `https://eth-kovan.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
+      accounts: [process.env.PRIVATE_KEY,process.env.USER1_PRIVATE_KEY,],
+    },
+    local: {
+      url: `http://127.0.0.1:8545`,
+      accounts: [process.env.PRIVATE_KEY,process.env.USER1_PRIVATE_KEY,],
+    },
+    hardhat: {
+      forking: {
+        url: `https://eth-rinkeby.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
+        accounts: [process.env.PRIVATE_KEY,process.env.USER1_PRIVATE_KEY,],
+      }
     },
   },
   gasReporter: {

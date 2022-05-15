@@ -1,13 +1,45 @@
 {
-  "name": "usbt",
+  "name": "USBT",
+  "version": "1.0.2",
+  "description": "Sustainable stablecoin backed by staked Ethereum basis trade",
+  "directories": {
+    "test": "test"
+  },
   "dependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
     "@nomiclabs/hardhat-etherscan": "^3.0.3",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "chai": "^4.3.6",
     "dotenv": "^16.0.1",
     "ethereum-waffle": "^3.2.0",
+    "glob": "^7.2.0",
     "hardhat": "^2.9.5",
     "hardhat-gas-reporter": "^1.0.8",
     "solidity-coverage": "^0.7.21"
-  }
+  },
+  "main": "hardhat test",
+  "scripts": {
+    "test": "hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesbachini/USBT.git"
+  },
+  "keywords": [
+    "Stablecoin",
+    "USBT",
+    "Basis Trade",
+    "Lido",
+    "Aave",
+    "DyDx",
+    "Solidity",
+    "Web3",
+    "EthGlobal"
+  ],
+  "author": "James Bachini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesbachini/USBT/issues"
+  },
+  "homepage": "https://github.com/jamesbachini/USBT#readme"
 }
