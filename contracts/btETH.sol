@@ -10,7 +10,7 @@ interface ILido {
 	function sharesOf(address _owner) external returns (uint balance);
 	function totalSupply() external returns (uint balance);
 	function transfer(address _to, uint _value) external returns (bool success);
-  function approve(address _spender, uint _value) external returns (bool success);
+	function approve(address _spender, uint _value) external returns (bool success);
 	function depositBufferedEther() external;
 }
 
@@ -18,7 +18,7 @@ interface IAave {
 	function supply(address asset,uint256 amount,address onBehalfOf,uint16 referralCode) external;
 	function borrow(address asset,uint256 amount,uint256 interestRateMode,uint16 referralCode,address onBehalfOf) external;
 	function repay(address asset,uint256 amount,uint256 rateMode,address onBehalfOf) external returns (uint256);
-	 function withdraw(address asset,uint256 amount,address to) external returns (uint256);
+	function withdraw(address asset,uint256 amount,address to) external returns (uint256);
 }
 
 contract btETH is ERC20 {
